@@ -1,2 +1,21 @@
+
+
 https://airiveria.com/en
+
+
+
+SECTIONS
+--------
+- Header
+- .. Hero
+- ..Footer
+
+
+
+DELETE GIT branch
+-------------------
+git branch -d working
+
+
+
 
