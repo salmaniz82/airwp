@@ -1,14 +1,54 @@
-
-
 https://airiveria.com/en
 
 
 
 SECTIONS
 --------
-- Header
-- .. Hero
-- ..Footer
+. Header
+.. nagiation
+.. logo
+. Hero SECTIONS
+.. hover image
+.. background video
+.. cities navigation
+.. CTA city list
+. fligh animation
+.. video left animation
+.. right text
+. youtube flight you wanted
+.. youtube video
+. inspired by georgia
+.. items horizontal scroll slide 
+. Boeing Plane
+.. Plane
+.. flying banner
+. To the Great Heights
+.. Video
+.. text
+.. form
+. Media
+.. list animation y scroll up
+. Faqs
+. Be on the first 
+.. news letter animation background color
+.. form
+. footer
+
+
+condensed
+----------
+header navigation
+Hero
+Flight Animation : about 
+youtube video : flight you need
+Inspired Georgia : horizontal slide
+Big Plane with flapper banner
+Great Heights : video animaiton and email form
+Media
+Faqs
+News letter promotions : animated background and form
+Footer 
+
 
 
 
@@ -16,6 +56,19 @@ DELETE GIT branch
 -------------------
 git branch -d working
 
+
+
+
+Hero Animation
+--------------
+#promo-wrapper : fixed
+.peep-wrapper scale 4, opacity 0
+.text-wrapper : opacity 0
+
+.main-destinations-wrapper 
+    .city_videos
+    .city_wrapper : opacity : 1, z-index : 2100 
+        .cities : 
 
 
 
