@@ -50,57 +50,52 @@ document.addEventListener("DOMContentLoaded", (e) => {
   
   */
 
-  const inpirationTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#inspiration-pinItem",
-      start: "top top",
-      end: "bottom top",
-      pin: true,
-      pinSpacing: true,
-      markers: false,
-      scrub: true,
-    },
-  });
+  if (window.innerWidth >= 768) {
+    console.log("animation activated for larger devices");
 
-  inpirationTl.fromTo("#inspirations-wrapper .slider-wrapper", { x: "0" }, { x: "-200%", duration: 3 });
-
-  inpirationTl.fromTo("#planeWrapper", { y: "0" }, { y: "-150%", duration: 2 });
-  inpirationTl.to("#planeWrapper #overlay", { opacity: 0.5, display: "flex" }, "+=1");
-  inpirationTl.to("#planeWrapper #overlay", { opacity: 1, display: "flex" });
-
-  /*
-  inpirationTl.to("#loyaltyProgram", { scale: 1 }, "+=1");
-  inpirationTl.to("#loyaltyProgram", { scale: 1, duration: 1, ease: "power1.inOut" }, "+=10");
-  */
-
-  /*
-  inpirationTl.to("#loyaltyProgram", { scale: 1 });
-  */
-
-  const loyaltyTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#loyaltyProgram",
-      start: "top bottom",
-      end: "bottom center",
-      pin: false,
-      pinSpacing: true,
-      markers: false,
-      scrub: true,
-      onUpdate: ({ progress }) => {
-        var myScrollProgress = progress.toFixed(2) * 100;
-        let planeAnimateIcon = document.querySelector(".plane-icon");
-
-        if (myScrollProgress < 90) {
-          planeAnimateIcon.classList.remove("planeAnimation");
-        }
-
-        if (myScrollProgress > 90) {
-          planeAnimateIcon.classList.add("planeAnimation");
-        }
+    const inpirationTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#inspiration-pinItem",
+        start: "top top",
+        end: "bottom top",
+        pin: true,
+        pinSpacing: true,
+        markers: false,
+        scrub: true,
       },
-    },
-  });
-  loyaltyTl.to("#loyaltyProgram", { scale: 1 });
+    });
+
+    inpirationTl.fromTo("#inspirations-wrapper .slider-wrapper", { x: "0" }, { x: "-200%", duration: 3 });
+
+    inpirationTl.fromTo("#planeWrapper", { y: "0" }, { y: "-150%", duration: 2 });
+    inpirationTl.to("#planeWrapper #overlay", { opacity: 0.5, display: "flex" }, "+=1");
+    inpirationTl.to("#planeWrapper #overlay", { opacity: 1, display: "flex" });
+
+    const loyaltyTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#loyaltyProgram",
+        start: "top bottom",
+        end: "bottom center",
+        pin: false,
+        pinSpacing: true,
+        markers: false,
+        scrub: true,
+        onUpdate: ({ progress }) => {
+          var myScrollProgress = progress.toFixed(2) * 100;
+          let planeAnimateIcon = document.querySelector(".plane-icon");
+
+          if (myScrollProgress < 90) {
+            planeAnimateIcon.classList.remove("planeAnimation");
+          }
+
+          if (myScrollProgress > 90) {
+            planeAnimateIcon.classList.add("planeAnimation");
+          }
+        },
+      },
+    });
+    loyaltyTl.to("#loyaltyProgram", { scale: 1 });
+  }
 
   const careerTL = gsap.timeline({
     scrollTrigger: {
@@ -140,15 +135,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   var citiesWrapper = document.getElementById("citiesWrapper");
 
-  // Add a mouseover event listener to the cities wrapper
   citiesWrapper.addEventListener("mouseover", function (event) {
-    // Check if the mouseover event occurred on a city element
     if (event.target.classList.contains("city")) {
-      // Get the index of the hovered city
       var index = Array.from(citiesWrapper.children).indexOf(event.target);
-
-      // Output the index (you can use it as needed)
-      console.log("Hovered on city with index: " + index);
 
       let cityVideos = document.querySelectorAll(".city-video");
 

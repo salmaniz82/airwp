@@ -1477,7 +1477,7 @@ body {
     padding: 0 15px;
   }
   .slider-item[_ngcontent-dfq-c37] {
-    width: 48%;
+    width: 100%;
     flex-wrap: wrap;
     margin-left: 0;
     margin-bottom: 30px;
@@ -2327,10 +2327,6 @@ body {
   cursor: pointer;
 }
 
-#planeWrapper {
-  margin-bottom: -150%;
-}
-
 #inspirations-wrapper .slider-wrapper {
   transition: transform 0.5s cubic-bezier(0.5, 1, 0.89, 1);
 }
@@ -2342,4 +2338,16 @@ body {
 
 .youtube-video-wrapper [_ngcontent-dfq-c36] {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  #inspirations-wrapper .slider-wrapper {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #planeWrapper {
+    margin-bottom: -150%;
+  }
 }
