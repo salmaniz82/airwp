@@ -30,15 +30,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
       pinSpacing: true,
       markers: false,
       scrub: true,
-
-      /*
-      onLeave: (self) => {
-        // Get the final position of the pinned element when pinning is about to end
-        const finalTopOffset = self.spacer.getBoundingClientRect().top;
-        // Set the pinned element to position: absolute and adjust the top offset
-        gsap.set(".promo-wrapper", { position: "absolute", top: finalTopOffset });
-      },
-      */
     },
   });
 
@@ -47,16 +38,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   heroTl.to("#promo-wrapper .text-wrapper", { opacity: 0 }, "-=0.3");
   heroTl.to(".peep-wrapper", { scale: 4, opacity: 0 });
   heroTl.to(".cities-wrapper", { opacity: 1, zIndex: 2100 }, "-=0.5");
-
   heroTl.to("#citiesWrapper", { y: "-95%", duration: 1 }, "+=0.5");
-
-  /* INSPIRATION SCROLL 
-
-  .inpiration-pinedItem
-
-  
-  
-  */
 
   if (window.innerWidth >= 768) {
     console.log("animation activated for larger devices");
