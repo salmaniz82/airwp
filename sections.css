@@ -2344,6 +2344,10 @@ body {
   #inspirations-wrapper .slider-wrapper {
     display: block !important;
   }
+
+  .peep-wrapper img {
+    transform: scale(1.5);
+  }
 }
 
 @media (min-width: 768px) {

@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", (e) => {
+  document.querySelector(".burger-icon-wrapper").addEventListener("click", (e) => {
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenu.classList.toggle("active");
+
+    e.preventDefault();
+  });
+
   console.log("content has been loaded herer");
 
   const cookieWrapper = document.querySelector(".cookies-wrapper");
