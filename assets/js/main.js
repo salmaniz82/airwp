@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-  console.log("DOMContentLoaded");
+  console.log("DOMContentLoaded Fired");
 
-  setTimeout(() => {
+  window.addEventListener("load", function () {
+    console.log("DOMContentLoaded Fired");
+
     document.querySelector(".loader-wrapper").classList.add("hidden");
-  });
-
-  setTimeout(() => {
     document.body.classList.remove("loading");
   });
 
