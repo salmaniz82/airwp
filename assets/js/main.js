@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     cookieWrapper.classList.add("close");
   });
 
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   const heroTl = gsap.timeline({
     scrollTrigger: {
@@ -33,12 +33,58 @@ document.addEventListener("DOMContentLoaded", (e) => {
     },
   });
 
+  const logoImgs = document.querySelectorAll(".header-flex-container .left-menu .logo img");
+
   heroTl.to(".peep-wrapper", { scale: 2 });
   heroTl.to(".cities-wrapper", { opacity: 0.5 }, "0");
   heroTl.to("#promo-wrapper .text-wrapper", { opacity: 0 }, "-=0.3");
-  heroTl.to(".peep-wrapper", { scale: 4, opacity: 0 });
+  heroTl.to(".peep-wrapper", {
+    scale: 4,
+    opacity: 0,
+    onStart: function () {
+      console.log("start of timeline");
+      logoImgs[0].classList.add("show");
+      logoImgs[1].classList.remove("show");
+      logoImgs[2].classList.remove("show");
+    },
+    onComplete: function () {
+      console.log("this done on timeline");
+      logoImgs[0].classList.remove("show");
+      logoImgs[1].classList.remove("show");
+      logoImgs[2].classList.add("show");
+    },
+  });
   heroTl.to(".cities-wrapper", { opacity: 1, zIndex: 2100 }, "-=0.5");
+  heroTl.addLabel("heroRevealed"); // Label the midway point
   heroTl.to("#citiesWrapper", { y: "-95%", duration: 1 }, "+=0.5");
+
+  const revealHeroButton = document.querySelector(".start-journey-button");
+
+  revealHeroButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    /*
+    heroTl.seek("heroRevealed");
+    */
+
+    console.log(heroTl.labels["heroRevealed"]);
+
+    const revealTime = heroTl.labels["heroRevealed"];
+
+    // Calculate scroll position based on ScrollTrigger and label position
+    // (Replace with your specific logic based on ScrollTrigger setup)
+    const trigger = heroTl.scrollTrigger; // Access your ScrollTrigger instance
+    const start = trigger.start;
+    const end = trigger.end;
+    const labelProgress = revealTime / heroTl.totalDuration();
+    const scrollPos = start + (end - start) * labelProgress;
+
+    console.log(scrollPos);
+    /*
+    gsap.to(window, { duration: 0.5, scrollTo: scrollPos });
+    */
+    gsap.to(window, { duration: 0.3, scrollTo: { y: scrollPos, autoKill: true } });
+  });
 
   if (window.innerWidth >= 768) {
     console.log("animation activated for larger devices");
@@ -209,4 +255,24 @@ document.addEventListener("DOMContentLoaded", (e) => {
       faqItemAnswer.classList.add("close");
     });
   }
+
+  const menuLinkItems = document.querySelectorAll(".menu-item a");
+
+  menuLinkItems.forEach((menuItem, index) => {
+    console.log(menuItem, index);
+
+    menuItem.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      let linkHref = e.target.getAttribute("href");
+
+      if (linkHref.includes("#")) {
+        const scrollDivId = linkHref.replace(/^\/(.*)/, "$1"); // Removes the leading slash
+
+        if (document.querySelector(scrollDivId)) {
+          gsap.to(window, { duration: 1, scrollTo: { y: scrollDivId.toString(), offsetY: 0 } });
+        }
+      }
+    });
+  });
 });
