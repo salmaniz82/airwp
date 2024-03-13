@@ -48,28 +48,6 @@ Great Heights : video animaiton and email form
 Media
 Faqs
 News letter promotions : animated background and form
-Footer 
-
-
-
-
-DELETE GIT branch
--------------------
-git branch -d working
-
-
-
-
-Hero Animation
---------------
-#promo-wrapper : fixed
-.peep-wrapper scale 4, opacity 0
-.text-wrapper : opacity 0
-
-.main-destinations-wrapper 
-    .city_videos
-    .city_wrapper : opacity : 1, z-index : 2100 
-        .cities : 
-
+Footer
 
 

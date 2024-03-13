@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", (e) => {
+  console.log("DOMContentLoaded");
+
   document.querySelector(".burger-icon-wrapper").addEventListener("click", (e) => {
     const mobileMenu = document.getElementById("mobile-menu");
 
@@ -6,8 +8,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     e.preventDefault();
   });
-
-  console.log("content has been loaded herer");
 
   const cookieWrapper = document.querySelector(".cookies-wrapper");
 
