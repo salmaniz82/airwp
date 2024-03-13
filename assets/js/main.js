@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log("DOMContentLoaded");
 
+  setTimeout(() => {
+    document.querySelector(".loader-wrapper").classList.add("hidden");
+  });
+
+  setTimeout(() => {
+    document.body.classList.remove("loading");
+  });
+
   document.querySelector(".burger-icon-wrapper").addEventListener("click", (e) => {
     const mobileMenu = document.getElementById("mobile-menu");
 

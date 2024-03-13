@@ -16,32 +16,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
     <link rel="“stylesheet”" href="“https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”" />
-
     <link rel="stylesheet" href="layout.css" />
-
     <link rel="stylesheet" href="sections.css" />
   </head>
-  <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-    <app-root _nghost-dfq-c10="" ng-version="15.1.1"
-      ><app-loader _ngcontent-dfq-c10="" _nghost-dfq-c7=""
-        ><div _ngcontent-dfq-c7="" class="loader-wrapper hidden">
-          <div _ngcontent-dfq-c7="" class="loader-video" hidden="">
+  <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" class="loading">
+    <app-root _nghost-dfq-c10="" ng-version="15.1.1">
+      <app-loader _ngcontent-dfq-c10="" _nghost-dfq-c7="">
+        <div _ngcontent-dfq-c7="" class="loader-wrapper">
+          <div _ngcontent-dfq-c7="" class="loader-video">
             <video _ngcontent-dfq-c7="" autoplay="" muted="" webkit-playsinline="" playsinline="" disablepictureinpicture="true" oncanplay="this.play()" onloadedmetadata="this.muted = true">
               <source _ngcontent-dfq-c7="" type="video/mp4" src="assets/videos/loader-white-desktop.mp4" />
             </video>
           </div>
           <div _ngcontent-dfq-c7="" class="loader-btn-wrapper"><div _ngcontent-dfq-c7="" class="loader-button">Take me away</div></div>
-        </div></app-loader
-      ><app-header _ngcontent-dfq-c10="" _nghost-dfq-c8=""
-        ><div _ngcontent-dfq-c8="" class="ph-wrapper">
+        </div>
+      </app-loader>
+      <app-header _ngcontent-dfq-c10="" _nghost-dfq-c8="" id="header">
+        <div _ngcontent-dfq-c8="" class="ph-wrapper">
           <div _ngcontent-dfq-c8="" class="container">
             <div _ngcontent-dfq-c8="" class="header-flex-container">
               <div _ngcontent-dfq-c8="" class="left-menu">
-                <a _ngcontent-dfq-c8="" class="logo"
-                  ><img _ngcontent-dfq-c8="" src="assets/images/logo.svg" alt="Animate WP logo" class="show" /><img _ngcontent-dfq-c8="" src="assets/images/green_logo.svg" alt="Animate WP logo" /><img
-                    _ngcontent-dfq-c8=""
-                    src="assets/images/logo-white.svg"
-                    alt="Animate WP logo"
+                <a _ngcontent-dfq-c8="" class="logo">
+                  <img _ngcontent-dfq-c8="" src="assets/images/logo.svg" alt="Animate WP logo" class="show" /><img _ngcontent-dfq-c8="" src="assets/images/green_logo.svg" alt="Animate WP logo" />
+                  <img _ngcontent-dfq-c8="" src="assets/images/logo-white.svg" alt="Animate WP logo"
                 /></a>
               </div>
               <div _ngcontent-dfq-c8="" class="right-menu">
@@ -57,8 +54,7 @@
                   </svg>
                   <span _ngcontent-dfq-c8=""> Loyalty </span>
                 </div>
-                <a _ngcontent-dfq-c8="" class="menu-item d-none d-sm-block" href="/contact"> Contact </a
-                ><!---->
+                <a _ngcontent-dfq-c8="" class="menu-item d-none d-sm-block" href="/contact"> Contact </a>
                 <div _ngcontent-dfq-c8="" class="burger-icon-wrapper d-sm-none">
                   <div _ngcontent-dfq-c8="" class="burger-icon-close burger-icon show-icon">
                     <span _ngcontent-dfq-c8="" class="first-line"></span><span _ngcontent-dfq-c8="" class="second-line"></span>
@@ -73,12 +69,10 @@
           <div _ngcontent-dfq-c8="" class="container">
             <div _ngcontent-dfq-c8="" class="responsive-inner-container">
               <div _ngcontent-dfq-c8="" class="menu"><a _ngcontent-dfq-c8="" class="menu_item"> Get Rewarded </a><a _ngcontent-dfq-c8="" class="menu_item" href="/contact"> Contact </a></div>
-              <!---->
             </div>
           </div>
         </div></app-header
-      ><router-outlet _ngcontent-dfq-c10=""></router-outlet
-      ><app-home _nghost-dfq-c43=""
+      ><app-home _nghost-dfq-c43="" id="home-contents"
         ><app-promo _ngcontent-dfq-c43="" id="promo" _nghost-dfq-c38=""
           ><div _ngcontent-dfq-c38="" class="wrapper">
             <div _ngcontent-dfq-c38="" id="promo-wrapper" class="promo-wrapper">
@@ -102,7 +96,7 @@
                       <source _ngcontent-dfq-c38="" type="video/mp4" src="assets/videos/default_city_859a817f82.mp4" />
                     </video>
                   </div>
-                  <!---->
+
                   <div _ngcontent-dfq-c38="" class="city-video">
                     <video _ngcontent-dfq-c38="" muted="" loop="" webkit-playsinline="" playsinline="" disablepictureinpicture="true" onloadedmetadata="this.muted = true" id="0VideoElement">
                       <source _ngcontent-dfq-c38="" type="video/mp4" src="https://admin.airiveria.com/uploads/paris_f48995a01f.mp4" />
@@ -172,11 +166,11 @@
             <div _ngcontent-dfq-c35="" class="container tablet-container">
               <div _ngcontent-dfq-c35="" class="flex-container">
                 <div _ngcontent-dfq-c35="" class="roads-wrapper">
-                  <!----><video _ngcontent-dfq-c35="" autoplay="" muted="" loop="" webkit-playsinline="" playsinline="" disablepictureinpicture="true">
-                    <source _ngcontent-dfq-c35="" type="video/mp4" src="https://admin.airiveria.com/uploads/lines_english_ad8665da7a.mp4" /></video
-                  ><!---->
+                  <video _ngcontent-dfq-c35="" autoplay="" muted="" loop="" webkit-playsinline="" playsinline="" disablepictureinpicture="true">
+                    <source _ngcontent-dfq-c35="" type="video/mp4" src="https://admin.airiveria.com/uploads/lines_english_ad8665da7a.mp4" />
+                  </video>
                 </div>
-                <!---->
+
                 <div _ngcontent-dfq-c35="" class="text-wrapper">
                   <div _ngcontent-dfq-c35="" class="section-title">We are in the making of one of the finest airlines in the industry, redefining your travel experience</div>
                   <div _ngcontent-dfq-c35="" class="about-flex-container">
@@ -210,13 +204,13 @@
                         hotels and cities of your destination.
                       </div>
                     </div>
-                    <!---->
                   </div>
                 </div>
               </div>
             </div>
           </div></app-about
-        ><app-youtube-video _ngcontent-dfq-c43="" _nghost-dfq-c36=""
+        >
+        <app-youtube-video _ngcontent-dfq-c43="" _nghost-dfq-c36=""
           ><div _ngcontent-dfq-c36="" class="youtube-video-wrapper">
             <div _ngcontent-dfq-c36="" class="container tablet-container">
               <div _ngcontent-dfq-c36="" class="yt-video-section-title" style="align-items: left">The Flight You Wanted</div>
@@ -487,7 +481,7 @@
             </div>
           </div></app-subscription
         ></app-home
-      ><!----><app-footer _ngcontent-dfq-c10="" _nghost-dfq-c9=""
+      ><!----><app-footer id="footer" _ngcontent-dfq-c10="" _nghost-dfq-c9=""
         ><div _ngcontent-dfq-c9="" class="footer-wrapper">
           <div _ngcontent-dfq-c9="" class="container tablet-container">
             <div _ngcontent-dfq-c9="" class="top-flex-container">
@@ -504,7 +498,6 @@
                 <li _ngcontent-dfq-c9="" class="menu-item"><a _ngcontent-dfq-c9="" href="/#career"> Careers </a></li>
                 <li _ngcontent-dfq-c9="" class="menu-item"><a _ngcontent-dfq-c9="" href="/#media"> Media </a></li>
                 <li _ngcontent-dfq-c9="" class="menu-item"><a _ngcontent-dfq-c9="" href="/#faq"> FAQ </a></li>
-                <li _ngcontent-dfq-c9="" class="menu-item"><a _ngcontent-dfq-c9="" href="/#nothing"> NOTHING </a></li>
               </ul>
               <ul _ngcontent-dfq-c9="" class="menu-items">
                 <li _ngcontent-dfq-c9="" class="menu-item"><a _ngcontent-dfq-c9="" href="/#contact"> Contact </a></li>
@@ -533,10 +526,7 @@
       >
       <div class="cookies-wrapper">
         <div class="text">
-          <div class="title">
-            By using the website, you are agreeing to our
-            <a href="#" target="_blank"> Cookie Policy </a><span> Accept </span>
-          </div>
+          <div class="title">By using the website, you are agreeing to our <a href="#" target="_blank"> Cookie Policy </a><span> Accept </span></div>
         </div>
         <div class="close cookie-close">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">

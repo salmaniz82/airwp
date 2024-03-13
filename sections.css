@@ -2413,3 +2413,10 @@ body {
     margin-bottom: -150%;
   }
 }
+
+body.loading #home-contents,
+body.loading #footer,
+body.loading .cookies-wrapper,
+body.loading #header {
+  display: none;
+}
